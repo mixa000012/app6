@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.example.groupsnavigation.FragmentMain"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentRP1"
+            app:destination="@id/fragmentRP1" />
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentRP2"
+            app:destination="@id/fragmentRP2" />
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentRP3"
+            app:destination="@id/fragmentRP3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRP1"
+        android:name="com.example.groupsnavigation.FragmentRP1"
+        android:label="fragment_rp1"
+        tools:layout="@layout/fragment_rp1" >
+        <action
+            android:id="@+id/action_fragmentRP1_to_fragmentRP2"
+            app:destination="@id/fragmentRP2" />
+        <action
+            android:id="@+id/action_fragmentRP1_to_fragmentMain"
+            app:destination="@id/fragmentMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRP2"
+        android:name="com.example.groupsnavigation.FragmentRP2"
+        android:label="fragment_rp2"
+        tools:layout="@layout/fragment_rp2" >
+        <action
+            android:id="@+id/action_fragmentRP2_to_fragmentRP1"
+            app:destination="@id/fragmentRP1" />
+        <action
+            android:id="@+id/action_fragmentRP2_to_fragmentRP3"
+            app:destination="@id/fragmentRP3" />
+        <action
+            android:id="@+id/action_fragmentRP2_to_fragmentMain"
+            app:destination="@id/fragmentMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRP3"
+        android:name="com.example.groupsnavigation.FragmentRP3"
+        android:label="fragment_rp3"
+        tools:layout="@layout/fragment_rp3" >
+        <action
+            android:id="@+id/action_fragmentRP3_to_fragmentMain"
+            app:destination="@id/fragmentMain" />
+        <action
+            android:id="@+id/action_fragmentRP3_to_fragmentRP2"
+            app:destination="@id/fragmentRP2" />
+    </fragment>
+</navigation>
